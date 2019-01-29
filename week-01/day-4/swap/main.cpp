@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-void swap(int&, int&);
+int swap(int&, int&);
 
 int main(int argc, char* args[]) {
     // Create two integer variables: a=15, b=23
@@ -11,19 +11,23 @@ int main(int argc, char* args[]) {
     int a=15;
     int b=23;
 
-    std::cout << "Before function swap is called: a:" << a << "   " << "b:" << b << std::endl;
-
     swap(a, b);
-
-    std::cout << "After function swap is called: a:" << a << "   " << "b:" << b << std::endl;
 
     return 0;
 }
 
-void swap(int &stNum, int &ndNum){
+int swap(int &stNum, int &ndNum){
+    std::cout << "Before function swap is called: a:" << stNum << "   " << "b:" << ndNum << std::endl;
+
     int swap = stNum;
     stNum = ndNum;
     ndNum = swap;
+
+    std::cout << "After function swap is called: a:" << stNum << "   " << "b:" << swap << std::endl;
+
+    return 0;
+
+
 
 
 
